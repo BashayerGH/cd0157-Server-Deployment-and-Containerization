@@ -6,7 +6,8 @@ data:
       - system:nodes
       rolearn: arn:aws:iam::056843022100:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-V3SBJZAORIA6
       username: system:node:{{EC2PrivateDNSName}}
-      - system:masters
+    - groups:
+       - system:masters
       rolearn: arn:aws:iam::056843022100:role/UdacityFlaskDeployCBKubectlRole
       username: build
 kind: ConfigMap
@@ -14,5 +15,5 @@ metadata:
   creationTimestamp: "2022-09-21T17:58:43Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1593"
+  resourceVersion: "3851"
   uid: e6344e6c-b6ec-43ff-a485-2ec7753f3db0
