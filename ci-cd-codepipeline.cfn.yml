@@ -12,7 +12,7 @@ Parameters:
     Default: simple-jwt-api
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter the EKS cluster name
+    ConstraintDescription: simple-jwt-api
 
   GitSourceRepo:
     Type: String
@@ -20,7 +20,7 @@ Parameters:
     Default: cd0157-Server-Deployment-and-Containerization
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub repository name
+    ConstraintDescription: cd0157-Server-Deployment-and-Containerization
 
   GitBranch:
     Type: String
@@ -28,7 +28,7 @@ Parameters:
     Description: GitHub git repository branch - change triggers a new build
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub repository branch name
+    ConstraintDescription: master
 
   GitHubToken:
     Type: String
@@ -36,15 +36,15 @@ Parameters:
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub personal access token
+    ConstraintDescription: GitHub personal access token
 
   GitHubUser:
     Type: String
-    Default: SudKul
+    Default: BashayerGH
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub username or organization
+    ConstraintDescription: BashayerGH
 
   CodeBuildDockerImage:
     Type: String
@@ -52,7 +52,7 @@ Parameters:
     Description: AWS CodeBuild Docker optimized image
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a CodeBuild Docker image
+    ConstraintDescription: CodeBuild Docker image
 
   KubectlRoleName:
     Type: String
@@ -60,7 +60,7 @@ Parameters:
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a kubectl IAM role
+    ConstraintDescription: kubectl IAM role
 
 
 Metadata:
